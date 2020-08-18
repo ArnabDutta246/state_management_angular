@@ -1,0 +1,48 @@
+//---------------colors ----------
+
+$colorWhite: #fff;
+$colorBlack: rgb(0, 0, 0);
+$colorGreen: rgb(3, 255, 74);
+$colorYellow: rgb(255, 247, 0);
+$colorOrange: rgb(255, 166, 0);
+$colorRed: #ff2e51;
+$colorBlue: royalblue;
+$colorDeepBlue: #3b5998;
+$colorGrey: rgb(241, 241, 241);
+$colorDeepGrey: #505050;
+
+//----------- light color-----------------
+$colorWhiteSmoke: #fbfbfb;
+$colorLightGreen: #cbffab;
+$colorLightPink: #ffd4d2;
+$colorLightYellow: #fffca2;
+$colorLightBlue: #a2f2ff;
+$colorLightBrown: #fab9b9;
+//---------------- gradient color----------
+$colorGradientGreen: radial-gradient(
+  circle,
+  rgba(3, 255, 74, 1) 0%,
+  rgba(6, 162, 102, 1) 100%,
+  rgba(11, 172, 140, 1) 100%
+);
+$colorGradientRedBackground: rgb(255, 90, 90);
+$colorGradientRed: radial-gradient(
+  circle,
+  rgba(255, 90, 90, 1) 0%,
+  rgba(235, 47, 17, 1) 100%,
+  rgba(217, 18, 18, 1) 100%
+);
+$colorGradientLigthGreenBackground: rgb(152, 255, 90);
+$colorGradientLigthGreen: radial-gradient(
+  circle,
+  rgba(152, 255, 90, 1) 0%,
+  rgba(124, 235, 17, 1) 100%,
+  rgba(217, 124, 18, 1) 100%
+);
+//-----------------------fonts
+// @font-face {
+//   font-family: myFirstFont;
+//   src: url("../../assets/font/Roboto-Medium.ttf");
+// }
+// $fontFamily: myFirstFont;
+$fontFamily: "Roboto";

@@ -1,0 +1,1200 @@
+<!----------------------top header---------------------->
+<section id="home">
+  <!--=======================top header for desktop display===================-->
+  <div class="top_nav_for_desktop">
+    <div
+      class="top-content-banner d-flex justify-content-between align-items-start"
+    >
+      <div>
+        <a href="https://www.facebook.com/Anchalbd20"
+          ><i class="fab fa-facebook-square"></i> :
+          https://www.facebook.com/Anchalbd20</a
+        >
+      </div>
+      <div class="d-flex justify-content-end align-items-start anchal-phone">
+        <div><i class="far fa-envelope"></i> : anchalbd1028@gmail.com</div>
+        <div><i class="fas fa-mobile-alt"></i> : 01521326965 / 75</div>
+      </div>
+    </div>
+    <div class="d-flex justify-content-around align-items-center top-header">
+      <div class="anchal-logo text-center">
+        <img src="../assets/img/anchal-logo.webp" alt="anchal-logo" />
+      </div>
+      <div class="top-navbar">
+        <ul class="d-flex flex-row justify-content-center align-items-center">
+          <li>
+            <a href="#home">Home</a>
+          </li>
+          <li>
+            <a href="#contact-us">About</a>
+          </li>
+          <li>
+            <a href="#organic-food">Shop <i class="fas fa-angle-down"></i></a>
+            <div class="sub_manu">
+              <div class="row">
+                <div class="col-12 mb-2">
+                  <a href="#organic-food">
+                    <div
+                      class="d-flex justify-content-start align-items-center"
+                    >
+                      <div class="border border-1 mr-2">
+                        <img
+                          src="../../../assets/img/ii/product_2.webp"
+                          alt=""
+                          srcset=""
+                        />
+                      </div>
+                      <div>
+                        <span class="font-weight-bold"
+                          >All Organic Products</span
+                        ><br />
+                        <small class="text-secondary"
+                          >From different origin</small
+                        >
+                      </div>
+                    </div></a
+                  >
+                </div>
+                <hr />
+                <div class="col-12 border-top-1">
+                  <a href="#home-made-food">
+                    <div
+                      class="d-flex justify-content-start align-items-center"
+                    >
+                      <div class="border border-1 mr-2">
+                        <img
+                          src="../../../assets/img/ii/home-made-1.webp"
+                          alt=""
+                          srcset=""
+                        />
+                      </div>
+                      <div>
+                        <span class="font-weight-bold">All Home-made Foods</span
+                        ><br />
+                        <small class="text-secondary">Fresh and healthy</small>
+                      </div>
+                    </div></a
+                  >
+                </div>
+              </div>
+            </div>
+          </li>
+          <!-- <li>
+            <a href="#homemade-items">Home-made Items</a>
+          </li> -->
+          <li>
+            <a href="#pre-order-product">Pre-Order</a>
+          </li>
+          <li>
+            <a href="#"
+              >E-Entrepreneur
+              <span class="badge badge-danger">upcoming</span></a
+            >
+          </li>
+          <li>
+            <a href="#contact-us">Contact us</a>
+          </li>
+        </ul>
+      </div>
+      <div class="ml-5 d-flex justify-content-end">
+        <div (click)="openNav()" class="alert-action">
+          <img
+            src="../assets/img/shop_bag.webp"
+            alt="cart"
+            class="shop-cart-bag ml-3"
+          />
+          <p class="circle">{{ cart.length }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--=======================top header for desktop display===================-->
+  <!--=======================top header for mobile display===================-->
+  <div class="top_nav_for_mobile fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="d-flex justify-content-between align-items-center">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">
+          <img
+            src="../assets/img/anchal-logo.webp"
+            alt="anchal_logo"
+            class="anchal-logo"
+          />
+        </a>
+        <div class="alert-action flex-grow-12">
+          <img
+            src="../assets/img/shop_bag.webp"
+            alt="cart"
+            class="shop-cart-bag"
+            (click)="openNav()"
+          />
+          <p class="circle">{{ cart.length }}</p>
+        </div>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact-us">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#organic-food">Shop</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="#homemade-items">Home-made Items</a>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link" href="#pre-order-product">Pre-Order</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"
+              >E-Entrepreneur
+              <span class="badge badge-danger">upcoming</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact-us">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <!--=======================top header for mobile display===================-->
+  <!--===========================top banner section===========================-->
+  <div class="container" id="carousel-box">
+    <div
+      id="carouselExampleInterval"
+      class="carousel slide"
+      data-ride="carousel"
+    >
+      <ol class="carousel-indicators">
+        <li
+          data-target="#carouselExampleIndicators"
+          data-slide-to="0"
+          class="active"
+        ></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-interval="6000">
+          <picture>
+            <source
+              srcset="../assets/img/top_banner_1_lg.webp"
+              media="(min-width: 1400px)"
+            />
+            <source
+              srcset="../assets/img/top_banner_1_lg.webp"
+              media="(min-width: 969px)"
+            />
+            <source
+              srcset="../assets/img/top_banner_1_md.webp"
+              media="(min-width: 769px)"
+            />
+            <source
+              srcset="../assets/img/top_banner_1_sm.jpg"
+              media="(min-width: 460px)"
+            />
+            <img
+              src="
+                ../assets/img/top_banner_1_sm.jpg
+              "
+              class="d-block"
+              alt="anchal delivery offer"
+            />
+          </picture>
+        </div>
+        <div class="carousel-item" data-interval="3000">
+          <picture>
+            <source
+              srcset="../assets/img/top_banner_3_lg.webp"
+              media="(min-width: 1400px)"
+            />
+            <source
+              srcset="../assets/img/top_banner_3_lg.webp"
+              media="(min-width: 969px)"
+            />
+            <source
+              srcset="../assets/img/top_banner_3_md.webp"
+              media="(min-width: 769px)"
+            />
+            <source
+              srcset="../assets/img/top_banner_3_sm.jpg"
+              media="(min-width: 577px)"
+            />
+            <img
+              src="../assets/img/top_banner_3_sm.jpg"
+              class="d-block"
+              alt="anchal chom chom banner"
+            />
+          </picture>
+        </div>
+        <div class="carousel-item" data-interval="3000">
+          <picture>
+            <source
+              srcset="../assets/img/top_banner_2_lg.webp"
+              media="(min-width: 1400px)"
+            />
+            <source
+              srcset="../assets/img/top_banner_2_lg.webp"
+              media="(min-width: 969px)"
+            />
+            <source
+              srcset="../assets/img/top_banner_2_md.webp"
+              media="(min-width: 769px)"
+            />
+            <source
+              srcset="../assets/img/top_banner_2_sm.jpg"
+              media="(min-width: 460px)"
+            />
+            <img
+              src="../assets/img/top_banner_2_sm.jpg"
+              class="d-block"
+              alt="anchal home made ruti"
+            />
+          </picture>
+        </div>
+      </div>
+      <a
+        class="carousel-control-prev"
+        href="#carouselExampleInterval"
+        role="button"
+        data-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a
+        class="carousel-control-next"
+        href="#carouselExampleInterval"
+        role="button"
+        data-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+  <!--===========================top banner section===========================-->
+</section>
+<!--===========================top header===========================-->
+
+<!--==============pre-order section==============-->
+<div class="container py-2" id="pre-order-product">
+  <div class="section-title-header">
+    <h5>Pre-ordering Products</h5>
+    <p>
+      <small class="text-secondary">To maintain fresh and purity</small>
+    </p>
+  </div>
+  <div class="row">
+    <ng-container *ngFor="let product of products; let i = index">
+      <div class="col-12 col-lg-6 py-2" *ngIf="product.preOrderable === true">
+        <div class="pre-order-box" [ngClass]="i % 2 === 1 ? 'three' : 'two'">
+          <div class="card">
+            <div class="row">
+              <div class="col-5 text-center">
+                <img [src]="product.image | safe: 'url'" [alt]="product.name" />
+              </div>
+              <div class="col-7">
+                <div class="pre-order-info px-lg-3 pt-lg-3">
+                  <h5>{{ product.preOrderTitle }}</h5>
+                  <small>{{ product.origin }}</small>
+                  <div class="d-flex justify-content-start align-items-center">
+                    <p class="product_price">{{ product.preOrderPrice }}</p>
+                    <p class="product_quantity ml-2">
+                      ( {{ product.preOrderQuantitiy }} )
+                    </p>
+                  </div>
+                  <div class="d-flex justify-content-start align-items-center">
+                    <button
+                      class="btn btn-sm btn-warning flex-grow-1 custom-order-button cursor"
+                      *ngIf="product.state === false; else viewCart"
+                      (click)="addToCartOrRemove(product)"
+                    >
+                      Add to cart
+                    </button>
+                    <ng-template #viewCart>
+                      <button
+                        class="btn btn-sm btn-outline-success bg-white flex-grow-1 custom-order-button"
+                        (click)="openNav()"
+                      >
+                        View in cart &#10003;
+                      </button>
+                    </ng-template>
+                    <button
+                      class="btn btn-sm btn-outline-dark ml-1 custom-details-button"
+                      data-toggle="modal"
+                      data-target="#staticBackdrop"
+                      (click)="productDetails(product)"
+                    >
+                      Details
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>
+<!--==============pre-order section==============-->
+
+<!--==============product section (normal)==============-->
+<div class="container pb-3 pb-lg-1" id="organic-food">
+  <div class="section-title-header">
+    <h5>Organic Products</h5>
+    <p>
+      <small class="text-secondary"
+        >We ensure high quality organic products focusing on different
+        origin</small
+      >
+    </p>
+  </div>
+  <div class="products-card-box">
+    <div class="row">
+      <ng-container *ngFor="let product of products; let i = index">
+        <div
+          class="col-6 col-lg-3 py-1 py-lg-3 mb-lg-3"
+          *ngIf="product.preOrderable !== true && product.category === 'normal'"
+        >
+          <div class="card single-product-card-box py-2 px-1 px-lg-2">
+            <!-- <img [src]="product.image" [alt]="product.name" class="my-2" /> -->
+            <img
+              [src]="product.image | safe: 'url'"
+              [alt]="product.name"
+              class="my-2 cursor"
+              data-toggle="modal"
+              data-target="#staticBackdrop"
+              (click)="productDetails(product)"
+            />
+            <div class="px-1 px-lg-4 pb-1">
+              <span
+                ><small class="text-dark">{{ product.origin }}</small></span
+              >
+              <h5 class="product_name">{{ product.name }}</h5>
+              <div
+                class="d-flex justify-content-between align-items-center mt-1"
+              >
+                <p class="product_quantity">{{ product.quantity }}</p>
+                <p class="product_price flex-grow-12">
+                  {{ product.displayPrice }}
+                </p>
+              </div>
+              <small
+                ><strong class="text-danger"
+                  >{{ product.inStock === false ? "Out of stock *" : "" }}
+                </strong></small
+              >
+              <div [ngClass]="product.inStock === false ? 'd-none' : ''">
+                <div class="d-flex justify-content-between align-items-center">
+                  <button
+                    class="btn btn-sm btn-warning flex-grow-1 custom-order-button cursor"
+                    *ngIf="product.state === false; else viewCart"
+                    (click)="addToCartOrRemove(product)"
+                    [disabled]="product.inStock === false"
+                  >
+                    Add to cart
+                  </button>
+                  <ng-template #viewCart>
+                    <button
+                      class="btn btn-sm btn-outline-success bg-white flex-grow-1 custom-order-button"
+                      (click)="openNav()"
+                    >
+                      View in cart &#10003;
+                    </button>
+                  </ng-template>
+                </div>
+              </div>
+            </div>
+            <div class="details-model-button">
+              <button
+                type="button"
+                class="btn btn-sm btn-outline-dark custom-details-button"
+                data-toggle="modal"
+                data-target="#staticBackdrop"
+                (click)="productDetails(product)"
+              >
+                Details
+              </button>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>
+<!--==============product section (normal) ==============-->
+<!--==============product section (home made)==============-->
+<section id="home-made-food">
+  <div class="container">
+    <div class="section-title-header">
+      <h5>Home-made Foods</h5>
+      <p>
+        <small class="text-secondary">Stay home, stay healthy </small>
+      </p>
+    </div>
+    <div class="products-card-box">
+      <div class="row">
+        <ng-container *ngFor="let product of products; let i = index">
+          <div
+            class="col-6 col-lg-3 py-1 py-lg-3 mb-lg-3"
+            *ngIf="product.id !== 'ANCHAL009' && product.category !== 'normal'"
+          >
+            <div class="card single-product-card-box py-2 px-1 px-lg-2">
+              <!-- <img [src]="product.image" [alt]="product.name" class="my-2" /> -->
+              <img
+                [src]="product.image | safe: 'url'"
+                [alt]="product.name"
+                class="my-2 cursor"
+              />
+              <div class="px-1 px-lg-4 pb-1">
+                <span
+                  ><small class="text-dark">{{ product.origin }}</small></span
+                >
+                <h5 class="product_name">{{ product.name }}</h5>
+                <div
+                  class="d-flex justify-content-between align-items-center mt-1"
+                >
+                  <p class="product_quantity">{{ product.quantity }}</p>
+                  <p class="product_price flex-grow-12">
+                    {{ product.displayPrice }}
+                  </p>
+                </div>
+                <small
+                  ><strong class="text-danger"
+                    >{{ product.inStock === false ? "Out of stock *" : "" }}
+                  </strong></small
+                >
+                <div [ngClass]="product.inStock === false ? 'd-none' : ''">
+                  <div
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <button
+                      class="btn btn-sm btn-warning flex-grow-1 custom-order-button cursor"
+                      *ngIf="product.state === false; else viewCart"
+                      (click)="addToCartOrRemove(product)"
+                      [disabled]="product.inStock === false"
+                    >
+                      Add to cart
+                    </button>
+                    <ng-template #viewCart>
+                      <button
+                        class="btn btn-sm btn-outline-success bg-white flex-grow-1 custom-order-button"
+                        (click)="openNav()"
+                      >
+                        View in cart &#10003;
+                      </button>
+                    </ng-template>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="details-model-button">
+                <button
+                  type="button"
+                  class="btn btn-sm btn-outline-dark custom-details-button"
+                  data-toggle="modal"
+                  data-target="#staticBackdrop"
+                  (click)="productDetails(product)"
+                >
+                  Details
+                </button>
+              </div> -->
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</section>
+<!--==============product section (normal) ==============-->
+<!--==============best seller section==============-->
+<div class="container py-2" id="best-seller-section">
+  <div class="section-title-header">
+    <h5>Best Reviewed</h5>
+    <p>
+      <small class="text-secondary"
+        >To know all the insights, please join into our FB group</small
+      >
+    </p>
+  </div>
+
+  <div class="row">
+    <ng-container *ngFor="let product of products">
+      <div class="col-12 col-lg-4 py-2" *ngIf="product.bestSeller === true">
+        <div class="pre-order-box one-best-seller">
+          <div class="card">
+            <div class="row">
+              <div class="col-4 text-center">
+                <img [src]="product.image | safe: 'url'" [alt]="product.name" />
+              </div>
+              <div class="col-8">
+                <div class="pre-order-info px-lg-3">
+                  <small>
+                    {{ product.origin }}
+                  </small>
+                  <h5>{{ product.name }}</h5>
+
+                  <div class="d-flex justify-content-start align-items-center">
+                    <p class="">{{ product.displayPrice }}</p>
+                    <p class="ml-2">( {{ product.quantity }} )</p>
+                  </div>
+                  <div class="d-flex justify-content-end">
+                    <div
+                      class="text-dark"
+                      style="width: 4rem; background-color: #ffe492;"
+                    >
+                      <span>&#9733;</span> 4.2/5
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>
+<!--==============best seller section==============-->
+<div class="clearfix"></div>
+<!---==============footer section==============-->
+<div class="anchal-group-img">
+  <picture>
+    <source
+      srcset="../assets/img/anchal-group-banner-lg.jpg"
+      media="(min-width: 1400px)"
+    />
+    <source
+      srcset="../assets/img/anchal-group-banner-lg.jpg"
+      media="(min-width: 969px)"
+    />
+    <source
+      srcset="../assets/img/anchal-group-banner.jpg"
+      media="(min-width: 769px)"
+    />
+    <source
+      srcset="../assets/img/anchal-group-banner-sm.jpg"
+      media="(min-width: 577px)"
+    />
+    <img src="../assets/img/anchal-group-banner-sm.jpg" alt="anchal-group" />
+  </picture>
+  <div class="text-center group-button-box p-2" style="background: #ffffffcc;">
+    <small class="font-weight-bold">To get insights</small>
+    <div class="section_header_fb_icon mb-2">
+      <a href="https://www.facebook.com/groups/1838437329613920">
+        <i class="fab fa-facebook-square fa-3x"></i
+      ></a>
+    </div>
+    <div>
+      <a
+        href="https://www.facebook.com/groups/1838437329613920"
+        class="btn btn-outline-dark custom-details-button btn-lg"
+        >Join in our Facebook Group</a
+      >
+    </div>
+  </div>
+</div>
+<!-- <div class="bg-success p-5" id="e-entrepreneur">
+  <div class="text-center">
+    <h3 class="text-white">E-Entrepreneur ( comming soon) </h3>
+  </div>
+</div> -->
+<section id="contact-us">
+  <div class="anchal-footer pt-2">
+    <div class="anchal_footer_logo text-center">
+      <img src="../assets/img/anchal-logo.webp" alt="" srcset="" />
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-8">
+          <p class="footer-text px-2 px-lg-5 text-justify">
+            কোনটি ভেজাল কিংবা কেন ভেজালযুক্ত তা সম্পর্কে জানলেই দেশীয় পণ্য ক্রয়ে
+            দাম ও গুণমান নিয়ে আপনি থাকবেন পুরোপুরি নিশ্চিন্ত । আপনার ও গ্রামীণ
+            শ্রমজীবীদের কথা ভেবে এবং স্বাস্থ্যকর ও খাঁটি পণ্যের নিশ্চয়তায় শুরু
+            হলো আমাদের "অঞ্চল" এর পথচলা ৷ শুধুমাত্র ১০০% খাঁটিতেই নয়,
+            সুস্বাস্থ্য ও কিছু সম্ভাবনা নিয়ে অঞ্চল থাকছে ১০০% বাংলাদেশের লক্ষ্যে
+            !
+          </p>
+        </div>
+        <div class="col-12 col-lg-4 footer_social_media">
+          <div class="text-center">
+            <!-- <div
+              class="fb-page"
+              data-href="https://www.facebook.com/Anchalbd20"
+              data-tabs="timeline,messages"
+              data-width="320"
+              data-height="450"
+              data-small-header="false"
+              data-adapt-container-width="true"
+              data-hide-cover="false"
+              data-show-facepile="true"
+            >
+              <blockquote
+                cite="https://www.facebook.com/Anchalbd20"
+                class="fb-xfbml-parse-ignore"
+              >
+                <a href="https://www.facebook.com/Anchalbd20">Anchal - অঞ্চল</a>
+              </blockquote>
+            </div> -->
+          </div>
+          <div class="text-left pt-3 px-3">
+            <div class="contact-icons c-one">
+              <i class="far fa-envelope"></i> : anchalbd1028@gmail.com
+            </div>
+            <div class="contact-icons c-two">
+              <i class="fas fa-mobile-alt"></i> : 01521326965 / 01521326975
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer_copyright p-2 mt-5 bg-dark text-center">
+      <small class="text-white" style="font-size: 11px;"
+        >Copyright © 2020 - Anchalbd Team</small
+      >
+    </div>
+  </div>
+</section>
+<!---==============footer section==============-->
+
+<!---===========================product details button===========================-->
+<!--   data-backdrop="static" -->
+<div
+  class="modal fade"
+  id="staticBackdrop"
+  data-keyboard="false"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="staticBackdropLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content" *ngIf="data != null">
+      <div class="modal-body">
+        <div class="product-details-card">
+          <button
+            type="button"
+            class="close product-details-close-button"
+            data-dismiss="modal"
+            aria-label="Close"
+            #modalCloseButton
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+
+          <div class="product-details-img text-center mb-2">
+            <img
+              [src]="data.image | safe: 'url'"
+              [alt]="data.name"
+              style="height: 200px;"
+            />
+          </div>
+
+          <div class="px-2 product-details-info">
+            <h5 class="product-details-title bangla-font">
+              {{ data.name }}
+            </h5>
+            <p class="product-details-origin bangla-font">
+              {{ data.origin }}
+            </p>
+            <small
+              ><strong>{{ data.detailsTitle }}</strong>
+              {{ data.details }}</small
+            >
+            <br />
+            <hr />
+            <small
+              ><strong>{{ data.detailsUsesTitle }}</strong>
+              {{ data.detailsUses }}</small
+            >
+            <br />
+            <h5 class="text-danger">
+              {{ data.inStock === false ? "Out of Stock *" : "" }}
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <div class="d-flex justify-content-start align-items-center">
+          <p class="product-details-price">{{ data.displayPrice }}</p>
+          <p class="product-details-quantity ml-2 mr-5">
+            ( {{ data.quantity }} )
+          </p>
+        </div>
+        <button
+          class="btn btn-sm btn-warning flex-grow-12 custom-order-button"
+          *ngIf="data.state === false; else viewCart"
+          (click)="addToCartOrRemove(data)"
+          [disabled]="data.inStock === false"
+        >
+          Add to cart
+        </button>
+        <ng-template #viewCart>
+          <button
+            class="btn btn-sm btn-outline-success bg-white flex-grow-12 custom-order-button"
+            (click)="modalAction()"
+          >
+            View in cart &#10003;
+          </button>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</div>
+<!---===========================product details button===========================-->
+<!--===========================side drawer=================================--->
+<div class="px-2 py-2 side-drawer close" id="side-drawer">
+  <div
+    class="side-drawer-top d-flex justify-content-between align-items-center"
+  >
+    <div class="side-drawer-img">
+      <img src="../assets/img/anchal-logo.webp" alt="anchal logo" srcset="" />
+    </div>
+    <div class="side-drawer-close" (click)="openNav()">
+      <span aria-hidden="true" class="font-weight-bold"
+        >Back to shop <i class="fas fa-chevron-right ml-2"></i
+      ></span>
+    </div>
+  </div>
+  <div class="side-drawer-box">
+    <nav>
+      <div class="nav nav-tabs" id="nav-tab" role="tablist">
+        <a
+          class="nav-item nav-link active font-weight-bold"
+          id="nav-home-tab"
+          data-toggle="tab"
+          href="#nav-home"
+          role="tab"
+          aria-controls="nav-home"
+          aria-selected="true"
+        >
+          <img
+            src="../assets/img/shop_bag.webp"
+            alt="shopping cart"
+            srcset=""
+            class="cart-bag-img"
+          />
+          My Cart
+        </a>
+        <a
+          class="nav-item nav-link pt-3 font-weight-bold"
+          id="nav-profile-tab-two"
+          data-toggle="tab"
+          href="#nav-profile-two"
+          role="tab"
+          aria-controls="nav-profile-two"
+          aria-selected="false"
+          ><i class="far fa-question-circle"></i> Order Info</a
+        >
+      </div>
+    </nav>
+    <div class="tab-content pt-2" id="nav-tabContent">
+      <div
+        class="tab-pane fade show active"
+        id="nav-home"
+        role="tabpanel"
+        aria-labelledby="nav-home-tab"
+      >
+        <div class="card cart-product-box">
+          <div class="card-body" id="card-body">
+            <!--================summery card one =============-->
+            <div class="card mb-1">
+              <div class="card-body">
+                <div class="px-2">
+                  <p class="product-count">
+                    <strong class="font-weight-bold"
+                      >{{ cart.length }}
+                      {{
+                        cart.length === 0 || cart.length === 1
+                          ? " item"
+                          : " items"
+                      }}</strong
+                    >
+                    in your cart list
+                  </p>
+                  <div
+                    class="d-flex justify-content-between align-items-center my-1"
+                  >
+                    <span class="text-secondary">Products M.R.P</span>
+                    <span class="text-secondary">BDT {{ subTotal }}</span>
+                  </div>
+                  <div
+                    class="d-flex justify-content-between align-items-centermy-1"
+                  >
+                    <span class="text-secondary">Delivery Charges</span>
+                    <span class="text-secondary">BDT {{ deliveryCharge }}</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer">
+                <div
+                  class="d-flex justify-content-between align-items-center font-weight-bold px-2"
+                >
+                  <span>Sub Total</span>
+                  <span>BDT {{ subTotal + deliveryCharge }}</span>
+                </div>
+              </div>
+            </div>
+            <!--================summery card one =============-->
+            <div class="tab-content" id="myTabContent">
+              <div
+                class="tab-pane fade show active"
+                id="home-oone"
+                role="tabpanel"
+                aria-labelledby="home-tab-oone"
+              >
+                <!--=========== cart panel=============-->
+
+                <ng-container *ngIf="cart.length > 0; else emptyCart">
+                  <ng-container *ngFor="let product of cart; let i = index">
+                    <!-- cart item list -->
+                    <div class="cart-product-single-box">
+                      <div
+                        class="d-flex justify-content-around align-items-end"
+                      >
+                        <div class="cart-product-img">
+                          <img
+                            [src]="product.image | safe: 'url'"
+                            [alt]="product.name"
+                            srcset=""
+                          />
+                        </div>
+
+                        <div class="cart-product-name">
+                          <span class="product name">{{ product.name }}</span>
+                          <div>
+                            <small class="cart-product-info-price"
+                              >{{ product.displayPrice }} ({{
+                                product.quantity
+                              }})</small
+                            >
+                          </div>
+                        </div>
+                        <div class="cart-product-quantity">
+                          <div class="input-group">
+                            <div class="input-group-prepend">
+                              <button
+                                class="btn btn-outline-secondary"
+                                type="button"
+                                id="button-addon1"
+                                (click)="needIncDecs(product, 'delete', i)"
+                              >
+                                <span>&minus;</span>
+                              </button>
+                            </div>
+                            <input
+                              type="text"
+                              class="form-control"
+                              placeholder=""
+                              aria-label="Example text with button addon"
+                              aria-describedby="button-addon1"
+                              readonly
+                              [value]="product.need"
+                              [id]="'pruductCartNeed' + i"
+                            />
+                            <div class="input-group-append">
+                              <button
+                                class="btn btn-outline-secondary"
+                                type="button"
+                                id="button-addon2"
+                                (click)="needIncDecs(product, 'update', i)"
+                              >
+                                <span>&#43;</span>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="cart-product-price">
+                          <span>BDT {{ product.currPrice }}</span>
+                        </div>
+                      </div>
+                      <div
+                        class="cart-product-remove mb-2 cursor"
+                        (click)="addToCartOrRemove(product)"
+                      >
+                        <!-- <span><i class="far fa-times-circle"></i></span> -->
+                        <span class="text-danger p-2"
+                          ><i class="far fa-trash-alt"></i>
+                        </span>
+                      </div>
+                      <div *ngIf="product.limit > 1">
+                        <small
+                          class="font-weight-bold ml-2"
+                          style="font-size: 0.69rem;"
+                          >N.B: {{ product.displayLimit }} সর্বনিম্ন
+                          অর্ডার</small
+                        >
+                      </div>
+                    </div>
+                    <!-- cart item list -->
+                  </ng-container>
+                </ng-container>
+                <ng-template #emptyCart>
+                  <div class="text-center" style="margin: 3.3rem auto;">
+                    <img
+                      src="../assets/img/shop_bag.webp"
+                      alt="empty cart"
+                      srcset=""
+                    />
+                    <p>Your cart is empty</p>
+                    <button
+                      class="btn btn-lg btn-block btn-warning"
+                      (click)="openNav()"
+                    >
+                      Continue shopping
+                    </button>
+                  </div>
+                </ng-template>
+                <!--=========== cart panel=============-->
+              </div>
+              <div
+                class="tab-pane fade"
+                id="contact-twoo"
+                role="tabpanel"
+                aria-labelledby="contact-tab-twoo"
+              >
+                <!--================order place form=========== -->
+                <div class="card">
+                  <div class="card-body">
+                    <span class="font-weight-bold text-secondary mb-1"
+                      >Your information for product delivery (In english)</span
+                    ><br />
+                    <form [formGroup]="orderForm" (ngSubmit)="onSubmit()">
+                      <div class="form-group">
+                        <label for="exampleFormControlInput1"
+                          >Your full name</label
+                        >
+                        <input
+                          autocomplete="nope"
+                          type="text"
+                          class="form-control"
+                          id="exampleFormControlInput1"
+                          placeholder=""
+                          required
+                          formControlName="name"
+                          [ngClass]="{
+                            'is-invalid': submitted && f.name.errors
+                          }"
+                        />
+                        <div
+                          *ngIf="submitted && f.name.errors"
+                          class="invalid-feedback"
+                        >
+                          please give your full name properly
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="exampleFormControlInput1"
+                          >Phone-number
+                        </label>
+                        <input
+                          autocomplete="nope"
+                          type="text"
+                          class="form-control"
+                          id="exampleFormControlInput2"
+                          placeholder="example: 01521326965"
+                          required
+                          formControlName="phone"
+                          [ngClass]="{
+                            'is-invalid': submitted && f.phone.errors
+                          }"
+                        />
+                        <div
+                          *ngIf="submitted && f.phone.errors"
+                          class="invalid-feedback"
+                        >
+                          please give your phone number
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleFormControlTextarea1"
+                          >Specific address</label
+                        >
+                        <textarea
+                          autocomplete="nope"
+                          class="form-control"
+                          id="exampleFormControlTextarea1"
+                          rows="4"
+                          required
+                          formControlName="address"
+                          [ngClass]="{
+                            'is-invalid': submitted && f.address.errors
+                          }"
+                        ></textarea>
+                        <div
+                          *ngIf="submitted && f.address.errors"
+                          class="invalid-feedback"
+                        >
+                          please give your proper address
+                        </div>
+                      </div>
+                      <button
+                        type="submit"
+                        class="btn btn-lg btn-block btn-success"
+                      >
+                        Confirm your order
+                      </button>
+                    </form>
+                  </div>
+                </div>
+                <!--================order place form=========== -->
+              </div>
+            </div>
+
+            <!--==========hidden tab button=============-->
+            <ul
+              class="nav nav-tabs"
+              id="myTab"
+              role="tablist"
+              style="visibility: hidden;"
+            >
+              <li class="nav-item" role="presentation">
+                <a
+                  class="nav-link active"
+                  id="home-tab-oone"
+                  data-toggle="tab"
+                  href="#home-oone"
+                  role="tab"
+                  aria-controls="home-oone"
+                  aria-selected="true"
+                  #backToCart
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item" role="presentation">
+                <a
+                  class="nav-link"
+                  id="contact-tab-twoo"
+                  data-toggle="tab"
+                  href="#contact-twoo"
+                  role="tab"
+                  aria-controls="contact-twoo"
+                  aria-selected="false"
+                  #goToOrder
+                  >Contact</a
+                >
+              </li>
+            </ul>
+            <!--==========hidden tab button=============-->
+          </div>
+          <div class="card-footer bg-white">
+            <!--=========== procced button===========-->
+            <div
+              class="procced-button"
+              [ngClass]="
+                cart.length === 0
+                  ? 'd-none'
+                  : cartState !== true
+                  ? 'd-none'
+                  : ''
+              "
+            >
+              <button
+                class="btn btn-lg btn-block btn-warning"
+                (click)="goToOrderF(1)"
+              >
+                Procced to checkout <i class="fas fa-chevron-right ml-3"></i>
+              </button>
+            </div>
+            <button
+              type="submit"
+              class="btn btn-lg btn-block btn-outline-danger"
+              (click)="goToOrderF(2)"
+              [ngClass]="
+                cart.length === 0
+                  ? 'd-none'
+                  : cartState !== true
+                  ? ''
+                  : 'd-none'
+              "
+            >
+              <i class="fas fa-chevron-left mr-3"></i> Back to cart
+            </button>
+            <!--=========== procced button===========-->
+          </div>
+        </div>
+      </div>
+      <div
+        class="tab-pane fade p-2"
+        id="nav-profile-two"
+        role="tabpanel"
+        aria-labelledby="nav-profile-tab-two"
+      >
+        <div class="c-info">
+          <!-- ==================== company info ================= -->
+          <div class="contact-info">
+            <p>
+              If you have any question regarding
+              <b>
+                order pleacing, order modifing & any delivery related issues
+              </b>
+              then please call us in this phone number which is given below.
+              Your are always welcome.
+            </p>
+            <p class="font-weignt-bold phone-number">Call: 01521326965 / 75</p>
+          </div>
+          <div class="p-2 products-rules mt-1">
+            <span class="font-weight-bold mb-1">Some products order rules</span>
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">Item</th>
+                  <th scope="col">Minimum order</th>
+                </tr>
+              </thead>
+              <tbody>
+                <ng-container *ngFor="let product of products; let i = index">
+                  <tr *ngIf="product.limit > 0">
+                    <td>{{ product.name }}</td>
+                    <td>{{ product.displayLimit }}</td>
+                  </tr>
+                </ng-container>
+              </tbody>
+            </table>
+          </div>
+          <!-- ==================== company info ================= -->
+        </div>
+      </div>
+      <div
+        class="tab-pane fade text-center pt-2"
+        id="nav-profile"
+        role="tabpanel"
+        aria-labelledby="nav-profile-tab"
+      ></div>
+      <div
+        class="tab-pane fade"
+        id="nav-contact"
+        role="tabpanel"
+        aria-labelledby="nav-contact-tab"
+      >
+        ...
+      </div>
+    </div>
+  </div>
+</div>
+<!--===========================side drawer=================================--->
+<div
+  class="fb-customerchat"
+  page_id="101149008318043"
+  theme_color="#13cf13"
+  logged_in_greeting="Hi! Welcome to our website. Let us know if you have any questions."
+  logged_out_greeting="Hi! Welcome to our website. Let us know if you have any questions."
+></div>

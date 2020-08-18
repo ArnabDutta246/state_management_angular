@@ -1,0 +1,96 @@
+.custom-order-button,
+.custom-details-button {
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.25rem 1.5rem;
+  border-radius: 31px !important;
+  @include response(tablet) {
+    font-size: 0.89rem;
+    padding: 0.3rem 0.7rem;
+  }
+  @include response(phone) {
+    font-size: 1.1rem;
+    padding: 0.3rem 0.7rem;
+  }
+  &:hover {
+    color: inherit;
+  }
+}
+.custom-details-button {
+  background: $colorWhite !important;
+  &:hover {
+    color: inherit;
+  }
+}
+//--------------------card design---------------------
+.single-product-card-box {
+  background: #f8f8f8;
+  position: relative;
+  text-align: center;
+  img {
+    height: 185px;
+    width: 185px;
+    margin: 0 auto;
+    transform: scale(0.8);
+    @include response(tablet) {
+      height: 165px;
+      width: 165px;
+      transform: scale(0.9);
+    }
+    @include response(phone) {
+      height: 157px;
+      width: 157px;
+      transform: scale(0.8);
+    }
+  }
+  .product_name {
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+  .product_quantity {
+    padding: 0.2rem 1em;
+    border: 1px solid gainsboro;
+    color: #7f7f7f;
+    font-size: 1.01rem;
+  }
+  .product_price {
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+  .details-model-button {
+    position: absolute;
+    top: 5px;
+    right: 3px;
+    // visibility: hidden;
+    .custom-details-button {
+      font-size: 0.89rem;
+      @include response(phone) {
+        font-size: 0.75rem;
+      }
+    }
+  }
+  // &:hover .details-model-button {
+  //   visibility: visible;
+  // }
+  .cursor {
+    cursor: pointer;
+  }
+}
+#homemade-items {
+  @include response(tablet) {
+    background: #fff2e0;
+    padding-top: 2.3rem;
+    padding-bottom: 1.3rem;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    margin-bottom: 1.5rem;
+  }
+  @include response(phone) {
+    background: #fff2e0;
+    padding-top: 2.3rem;
+    padding-bottom: 1.3rem;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    margin-bottom: 1.5rem;
+  }
+}

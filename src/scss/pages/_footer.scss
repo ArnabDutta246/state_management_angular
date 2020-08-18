@@ -1,0 +1,43 @@
+.anchal-footer {
+  // margin-top: 10rem;
+  background: $colorGrey;
+  .anchal_footer_logo {
+    margin: 2rem auto;
+    img {
+      height: 120px;
+      width: auto;
+      // margin-top: -83px;
+    }
+  }
+  .footer_social_media {
+    font-weight: 600;
+    text-align: center;
+  }
+  .contact-icons {
+    padding: 0.3rem;
+    margin: 0.3rem;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    font-size: 1.2rem;
+    i {
+      padding: 0.8rem;
+      border-radius: 50%;
+      background: $colorWhite;
+      color: $colorBlack;
+    }
+  }
+  .c-one {
+    color: $colorBlack;
+    background: #70ea75;
+  }
+  .c-two {
+    color: $colorBlack;
+    background: $colorWhiteSmoke;
+  }
+  .footer-text {
+    font-size: 1.4rem;
+    font-weight: 400;
+  }
+}

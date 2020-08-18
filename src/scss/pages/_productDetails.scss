@@ -1,0 +1,35 @@
+.product-details-card {
+  position: relative;
+  .product-details-img {
+    background: $colorGrey;
+  }
+  .product-details-title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    @include response(phone) {
+      font-size: 1.5rem;
+    }
+  }
+  .product-details-origin {
+    font-size: 1.4rem;
+    @include response(phone) {
+      font-size: 1.3rem;
+    }
+  }
+  .product-details-close-button {
+    height: 30px;
+    width: 30px;
+    background: $colorWhite !important;
+    color: $colorBlack;
+    border-radius: 50%;
+    // position: absolute;
+    top: 10px;
+    right: 20px;
+    border: 0.3px solid $colorBlack;
+    box-shadow: 1px 2px 2px $colorBlack;
+  }
+}
+.product-details-price {
+  font-size: 1.4rem;
+  font-weight: 600;
+}

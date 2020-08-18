@@ -1,0 +1,22 @@
+.section-title-header {
+  margin: 3rem 0rem;
+  @include response(phone) {
+    margin: 1.5rem 0rem;
+  }
+  h5 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: $colorDeepGrey;
+    @include response(phone) {
+      font-size: 1.8rem;
+    }
+  }
+  small {
+    @include response(phone) {
+      font-size: 1.1rem;
+    }
+  }
+}
+.section_header_fb_icon {
+  color: $colorDeepBlue;
+}
