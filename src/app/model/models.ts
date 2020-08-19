@@ -18,3 +18,19 @@ export interface Products {
   displayLimit: string;
   inStock: boolean;
 }
+
+export interface Customize {
+  banner: [];
+  entrepreneurs: [];
+}
+export interface Banner {
+  sm: string;
+  md: string;
+  lg: string;
+}
+export interface Entrep {
+  id: string;
+  name: string;
+  image: string;
+  skill: string;
+}

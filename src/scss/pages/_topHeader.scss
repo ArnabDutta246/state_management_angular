@@ -12,12 +12,13 @@
   @include response(phone) {
     .top_nav_for_mobile {
       display: block;
-      box-shadow: 1px 2px 3px $colorDeepGrey;
+      box-shadow: 1px 1px 1px #cccbcb;
       font-size: 1.2rem;
       background-color: #f6f6f6e6 !important;
       .anchal-logo {
-        height: 48px;
+        height: 36px;
         margin: 1px 13px;
+        transform: scale(1.13);
       }
       i {
         font-size: 1.9rem;

@@ -106,6 +106,45 @@
   box-shadow: none;
   font-weight: 500;
 }
+.error-class {
+  .swal2-content {
+    text-align: center;
+    font-size: 1rem !important;
+  }
+  .swal2-timer-progress-bar-container {
+    background: red;
+  }
+  .swal2-styled.swal2-confirm {
+    width: 100% !important;
+    background-color: #f44336;
+  }
+}
+.success-class {
+  .swal2-content {
+    text-align: center;
+    font-size: 1rem !important;
+  }
+  .swal2-timer-progress-bar-container {
+    background: colorGreen;
+  }
+  .swal2-styled.swal2-confirm {
+    width: 100% !important;
+    background-color: colorGreen;
+  }
+}
+.warning-class {
+  .swal2-content {
+    text-align: center;
+    font-size: 1rem !important;
+  }
+  .swal2-timer-progress-bar-container {
+    background: $colorOrange;
+  }
+  .swal2-styled.swal2-confirm {
+    width: 100% !important;
+    background-color: $colorOrange;
+  }
+}
 .form-control {
   height: calc(2em + 0.75rem + 2px);
 }

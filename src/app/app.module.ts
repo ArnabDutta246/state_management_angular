@@ -17,10 +17,11 @@ import { AdminLoginComponent } from "./admin/admin-login/admin-login.component";
 import { AdminPanelComponent } from "./admin/admin-panel/admin-panel.component";
 import { HomeComponent } from "./user/home/home.component";
 import { ToastrModule } from "ngx-toastr";
-import { ServiceWorkerModule } from "@angular/service-worker";
+//import { ServiceWorkerModule } from "@angular/service-worker";
 import { UpdateHomeComponent } from "./update/home/home.component";
 import { LoadingComponent } from "./update/loading/loading.component";
 import { LoadingService } from "./services/loading.service";
+import { MessageService } from "./services/message.service";
 //import { environment } from '../environments/environment';
 @NgModule({
   declarations: [
@@ -50,11 +51,11 @@ import { LoadingService } from "./services/loading.service";
       preventDuplicates: true,
       closeButton: false,
     }),
-    ServiceWorkerModule.register("ngsw-worker.js", {
-      enabled: environment.production,
-    }),
+    // ServiceWorkerModule.register("ngsw-worker.js", {
+    //   enabled: environment.production,
+    // }),
   ],
-  providers: [LoadingService],
+  providers: [LoadingService, MessageService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

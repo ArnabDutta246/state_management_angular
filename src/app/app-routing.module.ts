@@ -8,14 +8,14 @@ import { UpdateHomeComponent } from "./update/home/home.component";
 
 const routes: Routes = [
   { path: "", redirectTo: "/", pathMatch: "full" },
-  { path: "", component: HomeComponent },
+  // { path: "", component: HomeComponent },
   { path: "anchal-group", component: AdminLoginComponent },
   {
     path: "anchal-web-management",
     canActivate: [AuthService],
     component: AdminPanelComponent,
   },
-  { path: "update/home", component: UpdateHomeComponent },
+  { path: "", component: UpdateHomeComponent },
   { path: "**", redirectTo: "/" },
 ];
 

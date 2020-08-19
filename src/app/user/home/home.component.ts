@@ -114,22 +114,22 @@ export class HomeComponent implements OnInit, AfterViewInit {
     this.returnSessionData();
   }
   ngAfterViewInit() {
-    setTimeout(() => {
-      this.isLoading = false;
-      if (this.isLoading === false) {
-        let ifr = document.querySelector("iframe[data-testid='dialog_iframe']");
-        // if (ifr.classList.contains("fb_customer_chat_bounce_in_v2")) {
-        //   ifr.classList.remove("fb_customer_chat_bounce_in_v2");
-        //   ifr.classList.add("fb_customer_chat_bounce_out_v2");
-        // } else
-        if (
-          !ifr.classList.contains("fb_customer_chat_bounce_in_v2") ||
-          !ifr.classList.contains("fb_customer_chat_bounce_out_v2")
-        ) {
-          ifr.classList.add("fb_customer_chat_bounce_out_v2");
-        }
-      }
-    }, 5700);
+    // setTimeout(() => {
+    //   this.isLoading = false;
+    //   if (this.isLoading === false) {
+    //     let ifr = document.querySelector("iframe[data-testid='dialog_iframe']");
+    //     // if (ifr.classList.contains("fb_customer_chat_bounce_in_v2")) {
+    //     //   ifr.classList.remove("fb_customer_chat_bounce_in_v2");
+    //     //   ifr.classList.add("fb_customer_chat_bounce_out_v2");
+    //     // } else
+    //     if (
+    //       !ifr.classList.contains("fb_customer_chat_bounce_in_v2") ||
+    //       !ifr.classList.contains("fb_customer_chat_bounce_out_v2")
+    //     ) {
+    //       ifr.classList.add("fb_customer_chat_bounce_out_v2");
+    //     }
+    //   }
+    // }, 5700);
   }
   private initFacebookService(): void {
     const initParams: InitParams = {

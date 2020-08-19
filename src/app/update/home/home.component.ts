@@ -2,6 +2,8 @@ import { Component, OnInit } from "@angular/core";
 import { ObservablesService } from "src/app/services/observables.service";
 import { LoadingService } from "src/app/services/loading.service";
 import { Observable } from "rxjs";
+import { map, filter } from "rxjs/operators";
+import { Banner, Entrep } from "src/app/model/models";
 
 @Component({
   selector: "app-home",
@@ -9,8 +11,8 @@ import { Observable } from "rxjs";
   styleUrls: ["./home.component.scss"],
 })
 export class UpdateHomeComponent implements OnInit {
-  carousel$: Observable<any>;
-  enterprenourse$: Observable<any>;
+  banner$: any[] = [];
+  enterprenourse$: any[] = [];
   constructor(
     private observables: ObservablesService,
     private loadingService: LoadingService
@@ -20,12 +22,21 @@ export class UpdateHomeComponent implements OnInit {
     this.setCarouselEntreprenourse();
   }
   setCarouselEntreprenourse() {
-    this.carousel$ = this.observables.filterCarousalOrEntreprenours("banner");
-    this.enterprenourse$ = this.observables.filterCarousalOrEntreprenours(
-      "entrepreneurs"
+    this.loadingService.loadingOn();
+    this.observables.custmizeDataObservable$.subscribe(
+      (res) => {
+        if (res !== null) {
+          this.banner$ = res["banner"];
+          this.enterprenourse$ = res["entrepreneurs"];
+        }
+      },
+      (err) => {
+        console.log(err);
+        this.loadingService.loadingOff();
+      },
+      () => {
+        this.loadingService.loadingOff();
+      }
     );
-
-    console.log("1", this.carousel$);
-    console.log("2", this.enterprenourse$);
   }
 }

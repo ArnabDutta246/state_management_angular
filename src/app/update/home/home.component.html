@@ -189,34 +189,34 @@
         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
       </ol>
-      <div class="carousel-inner">
-        <div class="carousel-item active" data-interval="4000">
+      
+      <div class="carousel-inner" *ngIf="banner$.length">
+        <ng-container *ngFor="let banner of banner$ ; let i=index">
+        <div class="carousel-item" data-interval="4000" [ngClass]="i=== 0?'active':''">
           <picture>
             <source
-              srcset="../assets/img/top_banner_1_lg.webp"
+              [srcset]="banner.md"
               media="(min-width: 1400px)"
             />
             <source
-              srcset="../assets/img/top_banner_1_lg.webp"
+              [srcset]="banner.md"
               media="(min-width: 969px)"
             />
             <source
-              srcset="../assets/img/top_banner_1_md.webp"
+         [srcset]="banner.md"
               media="(min-width: 769px)"
             />
             <source
-              srcset="../assets/img/top_banner_1_sm.jpg"
+            [srcset]="banner.sm"
               media="(min-width: 460px)"
             />
             <img
-              src="
-                ../assets/img/top_banner_1_sm.jpg
-              "
+              [src]="banner.sm"
               class="d-block"
               alt="anchal delivery offer"
             />
           </picture>
-        </div>
+        </div></ng-container>
         <!-- <div class="carousel-item" data-interval="3000">
           <picture>
             <source

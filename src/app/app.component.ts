@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { SwUpdate } from "@angular/service-worker";
+//import { SwUpdate } from "@angular/service-worker";
 import Swal from "sweetalert2";
 import { Router, NavigationEnd } from "@angular/router";
 
@@ -12,7 +12,7 @@ declare let ga: Function;
 })
 export class AppComponent {
   //=============================================
-  constructor(private swUpdate: SwUpdate, private router: Router) {
+  constructor(private router: Router) {
     //====================check new update service=============
     // if (this.swUpdate.isEnabled) {
     //   this.swUpdate.available.subscribe(() => {
