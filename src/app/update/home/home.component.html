@@ -98,8 +98,14 @@
       </div>
       <div class="ml-5 d-flex justify-content-end">
         <div (click)="openNav()" class="alert-action">
-          <img
+          <!-- <img
             src="../assets/img/shop_bag.webp"
+            alt="cart"
+            class="shop-cart-bag ml-3"
+          /> -->
+          <!-- <p class="circle">{{ cart.length }}</p> -->
+          <img
+            src="../../../assets/img/svgs/cart.svg"
             alt="cart"
             class="shop-cart-bag ml-3"
           />
@@ -133,10 +139,9 @@
         </a>
         <div class="alert-action flex-grow-12">
           <img
-            src="../assets/img/shop_bag.webp"
+            src="../../../assets/img/svgs/cart.svg"
             alt="cart"
             class="shop-cart-bag"
-            (click)="openNav()"
           />
           <!-- <p class="circle">{{ cart.length }}</p> -->
         </div>
@@ -172,9 +177,73 @@
       </div>
     </nav>
   </div>
+
   <!--=======================top header for mobile display===================-->
   <!--===========================top banner section===========================-->
   <div class="container" id="carousel-box">
+    <div class="d-block d-lg-none">
+      <span
+        class="text-capitalize font-weight-bold text-secondary mx-2"
+        style="font-size: 0.8rem;"
+      >
+        All Categories
+      </span>
+      <div
+        class="all_categories d-flex flex-row justify-content-start align-items-center flex-wrap mb-3 mt-1"
+      >
+        <!-- organic items -->
+        <a href="#">
+          <div
+            class="single_categories d-flex flex-column align-items-center border rounded py-1 px-3 cat_one"
+          >
+            <img
+              src="../../../assets/img/svgs/organic.svg"
+              alt="anchal organic food"
+            />
+            <span class="ml-1 font-weight-bold text-secondary"
+              >Organic Foods</span
+            >
+          </div></a
+        >
+        <!-- sweet items -->
+        <a href="#">
+          <div
+            class="single_categories d-flex flex-column align-items-center border rounded py-1 px-3 cat_two"
+          >
+            <img
+              src="../../../assets/img/svgs/sweet.svg"
+              alt="anchal sweet food"
+            />
+            <span class="ml-1 font-weight-bold text-secondary"
+              >Sweet Items</span
+            >
+          </div></a
+        >
+        <!-- pre-order -->
+        <a href="#">
+          <div
+            class="single_categories d-flex flex-column align-items-center border rounded py-1 px-3 cat_three"
+          >
+            <img
+              src="../../../assets/img/svgs/announce.svg"
+              alt="anchal pre-order food"
+            />
+            <span class="ml-1 font-weight-bold text-secondary"
+              >Pre-order Items</span
+            >
+          </div></a
+        >
+        <!-- pre-order -->
+        <a href="#">
+          <div
+            class="single_categories d-flex flex-column align-items-center border rounded py-1 px-3"
+          >
+            <img src="../../../assets/img/svgs/tick.svg" alt="e-anchal" />
+            <span class="ml-1 font-weight-bold text-secondary">E-Anchal</span>
+          </div></a
+        >
+      </div>
+    </div>
     <div
       id="carouselExampleInterval"
       class="carousel slide"
@@ -189,9 +258,9 @@
         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
       </ol>
-      
-      <div class="carousel-inner" *ngIf="banner$.length">
-        <ng-container *ngFor="let banner of banner$ ; let i=index">
+
+      <div class="carousel-inner">
+        <!-- <ng-container *ngFor="let banner of banner$ ; let i=index">
         <div class="carousel-item" data-interval="4000" [ngClass]="i=== 0?'active':''">
           <picture>
             <source
@@ -216,27 +285,27 @@
               alt="anchal delivery offer"
             />
           </picture>
-        </div></ng-container>
-        <!-- <div class="carousel-item" data-interval="3000">
+        </div></ng-container> -->
+        <div class="carousel-item active" data-interval="3000">
           <picture>
             <source
-              srcset="../assets/img/top_banner_3_lg.webp"
+              srcset="../../../assets/img/top_banner_3_lg.webp"
               media="(min-width: 1400px)"
             />
             <source
-              srcset="../assets/img/top_banner_3_lg.webp"
+              srcset="../../../assets/img/top_banner_3_lg.webp"
               media="(min-width: 969px)"
             />
             <source
-              srcset="../assets/img/top_banner_3_md.webp"
+              srcset="../../../assets/img/top_banner_3_md.webp"
               media="(min-width: 769px)"
             />
             <source
-              srcset="../assets/img/top_banner_3_sm.jpg"
+              srcset="../../../assets/img/top_banner_3_sm.jpg"
               media="(min-width: 577px)"
             />
             <img
-              src="../assets/img/top_banner_3_sm.jpg"
+              src="../../../assets/img/top_banner_3_sm.jpg"
               class="d-block"
               alt="anchal chom chom banner"
             />
@@ -245,28 +314,28 @@
         <div class="carousel-item" data-interval="3000">
           <picture>
             <source
-              srcset="../assets/img/top_banner_2_lg.webp"
+              srcset="../../../assets/img/top_banner_2_lg.webp"
               media="(min-width: 1400px)"
             />
             <source
-              srcset="../assets/img/top_banner_2_lg.webp"
+              srcset="../../../assets/img/top_banner_2_lg.webp"
               media="(min-width: 969px)"
             />
             <source
-              srcset="../assets/img/top_banner_2_md.webp"
+              srcset="../../../assets/img/top_banner_2_md.webp"
               media="(min-width: 769px)"
             />
             <source
-              srcset="../assets/img/top_banner_2_sm.jpg"
+              srcset="../../../assets/img/top_banner_2_sm.jpg"
               media="(min-width: 460px)"
             />
             <img
-              src="../assets/img/top_banner_2_sm.jpg"
+              src="../../../assets/img/top_banner_2_sm.jpg"
               class="d-block"
               alt="anchal home made ruti"
             />
           </picture>
-        </div> -->
+        </div>
       </div>
       <a
         class="carousel-control-prev"
@@ -291,3 +360,128 @@
   <!--===========================top banner section===========================-->
 </section>
 <!--===========================top header===========================-->
+
+<!--==============pre-order section==============-->
+<div class="container py-2" id="pre-order-product">
+  <div class="section-title-header">
+    <h5>Pre-ordering Products</h5>
+    <p>
+      <small class="text-secondary">To maintain fresh and purity</small>
+    </p>
+  </div>
+  <div class="row">
+    <ng-container *ngFor="let product of products; let i = index">
+      <div class="col-12 col-lg-6 py-2" *ngIf="product.preOrderable === true">
+        <div class="pre-order-box" [ngClass]="i % 2 === 1 ? 'three' : 'two'">
+          <div class="card">
+            <div class="row">
+              <div class="col-5 text-center">
+                <img [src]="product.image | safe: 'url'" [alt]="product.name" />
+              </div>
+              <div class="col-7">
+                <div class="pre-order-info px-lg-3 pt-lg-3">
+                  <h5>{{ product.preOrderTitle }}</h5>
+                  <small>{{ product.origin }}</small>
+                  <div class="d-flex justify-content-start align-items-center">
+                    <p class="product_price">{{ product.preOrderPrice }}</p>
+                    <p class="product_quantity ml-2">
+                      ( {{ product.preOrderQuantitiy }} )
+                    </p>
+                  </div>
+                  <div class="d-flex justify-content-start align-items-center">
+                    <button
+                      class="btn btn-sm btn-warning flex-grow-1 custom-order-button cursor"
+                      *ngIf="product.state === false; else viewCart"
+                      (click)="addToCartOrRemove(product)"
+                    >
+                      Add to cart
+                    </button>
+                    <ng-template #viewCart>
+                      <button
+                        class="btn btn-sm btn-outline-success bg-white flex-grow-1 custom-order-button"
+                        (click)="openNav()"
+                      >
+                        View in cart &#10003;
+                      </button>
+                    </ng-template>
+                    <button
+                      class="btn btn-sm btn-outline-dark ml-1 custom-details-button"
+                      data-toggle="modal"
+                      data-target="#staticBackdrop"
+                      (click)="productDetails(product)"
+                    >
+                      Details
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>
+<!--==============pre-order section==============-->
+
+<!-- ================== bottom navigation bar ============== -->
+<div class="bottom_nabigation_bar">
+  <div class="d-flex flex-row justify-content-around align-item-center">
+    <a [routerLink]="['/']" routerLinkActive="bottom_nav_active">
+      <div class="single_nav_box active-bottom">
+        <div class="d-flex flex-column align-items-center">
+          <img src="../../../assets/img/svgs/shop.svg" alt="shop" class="svg" />
+          <span>Shop</span>
+        </div>
+      </div>
+    </a>
+    <a [routerLink]="['/eanchal']" routerLinkActive="bottom_nav_active">
+      <div class="single_nav_box">
+        <div class="d-flex flex-column align-items-center">
+          <img
+            src="../../../assets/img/svgs/entrepre.svg"
+            alt="E-Anchal"
+            class="svg"
+          />
+          <span>E-Anchal</span>
+        </div>
+      </div>
+    </a>
+    <a href="#categories">
+      <div class="single_nav_box">
+        <div class="d-flex flex-column align-items-center">
+          <img
+            src="../../../assets/img/svgs/search.svg"
+            alt="Categories"
+            class="svg"
+          />
+          <span>Categories</span>
+        </div>
+      </div>
+    </a>
+    <a [routerLink]="['/contactus']" routerLinkActive="bottom_nav_active">
+      <div class="single_nav_box">
+        <div class="d-flex flex-column align-items-center">
+          <img
+            src="../../../assets/img/svgs/contact.svg"
+            alt="contact_us"
+            class="svg"
+          />
+          <span>Contact Us</span>
+        </div>
+      </div>
+    </a>
+    <a [routerLink]="['/account']" routerLinkActive="bottom_nav_active">
+      <div class="single_nav_box">
+        <div class="d-flex flex-column align-items-center">
+          <img
+            src="../../../assets/img/svgs/profile.svg"
+            alt="account"
+            class="svg"
+          />
+          <span>Account</span>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>

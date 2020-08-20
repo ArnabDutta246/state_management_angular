@@ -37,7 +37,7 @@ export class ObservablesService {
     private sl: MessageService
   ) {
     // this.fetchData();
-    this.fetchCoustomizeData();
+    // this.fetchCoustomizeData();
   }
   //==========================reference====================
   // fetchData(): Observable<Products[]> {

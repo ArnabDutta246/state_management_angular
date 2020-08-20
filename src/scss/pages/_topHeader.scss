@@ -170,13 +170,13 @@
     margin-top: 1rem;
 
     @include response(tablet) {
-      margin-top: 7rem;
+      margin-top: 5rem;
     }
     @include response(normal-device) {
       margin-top: 1rem;
     }
     @include response(phone) {
-      margin-top: 7rem;
+      margin-top: 5rem;
       padding: 0.3rem;
     }
   }
@@ -200,4 +200,24 @@
       }
     }
   }
+}
+//=======================small capsule design ==========
+.single_categories {
+  margin: 0.3rem 0.3rem;
+  img {
+    height: 20px;
+  }
+  span {
+    font-size: 0.7rem;
+    text-transform: capitalize;
+  }
+}
+.cat_one {
+  background: honeydew;
+}
+.cat_two {
+  background: #feeded;
+}
+.cat_three {
+  background: #fef9f1;
 }

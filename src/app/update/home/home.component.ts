@@ -4,7 +4,7 @@ import { LoadingService } from "src/app/services/loading.service";
 import { Observable } from "rxjs";
 import { map, filter } from "rxjs/operators";
 import { Banner, Entrep } from "src/app/model/models";
-
+import { allProducts } from "src/products/allProducts";
 @Component({
   selector: "app-home",
   templateUrl: "./home.component.html",
@@ -13,13 +13,17 @@ import { Banner, Entrep } from "src/app/model/models";
 export class UpdateHomeComponent implements OnInit {
   banner$: any[] = [];
   enterprenourse$: any[] = [];
+  products: any = [];
   constructor(
     private observables: ObservablesService,
     private loadingService: LoadingService
-  ) {}
+  ) {
+    //=============load products data=====
+    this.products = allProducts;
+  }
 
   ngOnInit() {
-    this.setCarouselEntreprenourse();
+    //this.setCarouselEntreprenourse();
   }
   setCarouselEntreprenourse() {
     this.loadingService.loadingOn();
