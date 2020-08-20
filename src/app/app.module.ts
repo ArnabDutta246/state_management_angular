@@ -22,6 +22,7 @@ import { UpdateHomeComponent } from "./update/home/home.component";
 import { LoadingComponent } from "./update/loading/loading.component";
 import { LoadingService } from "./services/loading.service";
 import { MessageService } from "./services/message.service";
+import { DetailsComponent } from './update/products/details/details.component';
 //import { environment } from '../environments/environment';
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { MessageService } from "./services/message.service";
     HomeComponent,
     UpdateHomeComponent,
     LoadingComponent,
+    DetailsComponent,
   ],
   imports: [
     BrowserAnimationsModule,

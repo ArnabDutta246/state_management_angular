@@ -202,16 +202,36 @@
   }
 }
 //=======================small capsule design ==========
-.single_categories {
-  margin: 0.3rem 0.3rem;
-  img {
-    height: 20px;
-  }
-  span {
-    font-size: 0.7rem;
-    text-transform: capitalize;
+.categories_container {
+  width: 100%;
+  height: auto;
+  .all_categories {
+    height: auto;
+    position: relative;
+    a {
+      .single_categories {
+        margin: 0.3rem 0.3rem;
+        img {
+          height: 25px;
+        }
+        span {
+          font-size: 0.7rem;
+          text-transform: capitalize;
+        }
+      }
+    }
+    // .blur-box {
+    //   padding: 18px 8px;
+    //   background: #ffffff;
+    //   position: absolute;
+    //   z-index: 9;
+    //   top: -1%;
+    //   right: 0;
+    //   border: 1px solid #d0d0d0;
+    // }
   }
 }
+
 .cat_one {
   background: honeydew;
 }
@@ -220,4 +240,7 @@
 }
 .cat_three {
   background: #fef9f1;
+  img {
+    transform: rotate(-20deg);
+  }
 }

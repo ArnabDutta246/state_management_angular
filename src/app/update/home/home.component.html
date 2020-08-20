@@ -184,65 +184,95 @@
     <div class="d-block d-lg-none">
       <span
         class="text-capitalize font-weight-bold text-secondary mx-2"
-        style="font-size: 0.8rem;"
+        style="font-size: 1rem;"
       >
         All Categories
       </span>
-      <div
-        class="all_categories d-flex flex-row justify-content-start align-items-center flex-wrap mb-3 mt-1"
-      >
-        <!-- organic items -->
-        <a href="#">
-          <div
-            class="single_categories d-flex flex-column align-items-center border rounded py-1 px-3 cat_one"
-          >
-            <img
-              src="../../../assets/img/svgs/organic.svg"
-              alt="anchal organic food"
-            />
-            <span class="ml-1 font-weight-bold text-secondary"
-              >Organic Foods</span
-            >
-          </div></a
-        >
-        <!-- sweet items -->
-        <a href="#">
-          <div
-            class="single_categories d-flex flex-column align-items-center border rounded py-1 px-3 cat_two"
-          >
-            <img
-              src="../../../assets/img/svgs/sweet.svg"
-              alt="anchal sweet food"
-            />
-            <span class="ml-1 font-weight-bold text-secondary"
-              >Sweet Items</span
-            >
-          </div></a
-        >
-        <!-- pre-order -->
-        <a href="#">
-          <div
-            class="single_categories d-flex flex-column align-items-center border rounded py-1 px-3 cat_three"
-          >
-            <img
-              src="../../../assets/img/svgs/announce.svg"
-              alt="anchal pre-order food"
-            />
-            <span class="ml-1 font-weight-bold text-secondary"
-              >Pre-order Items</span
-            >
-          </div></a
-        >
-        <!-- pre-order -->
-        <a href="#">
-          <div
-            class="single_categories d-flex flex-column align-items-center border rounded py-1 px-3"
-          >
-            <img src="../../../assets/img/svgs/tick.svg" alt="e-anchal" />
-            <span class="ml-1 font-weight-bold text-secondary">E-Anchal</span>
-          </div></a
-        >
+      <div class="categories_container">
+        <div class="all_categories mb-3 mt-1">
+          <!-- <div class="blur-box">&#8250;</div> -->
+          <owl-carousel-o [options]="customOptions">
+            <ng-template carouselSlide>
+              <!-- organic items -->
+              <a href="#">
+                <div
+                  class="single_categories d-flex flex-column align-items-center border rounded py-1 px-3 cat_one"
+                >
+                  <img
+                    src="../../../assets/img/svgs/organic.svg"
+                    alt="anchal organic food"
+                  />
+                  <span class="ml-1 font-weight-bold text-secondary"
+                    >Organic Foods</span
+                  >
+                </div>
+              </a>
+            </ng-template>
+            <ng-template carouselSlide>
+              <!-- sweet items -->
+              <a href="#">
+                <div
+                  class="single_categories d-flex flex-column align-items-center border rounded py-1 px-3 cat_two"
+                >
+                  <img
+                    src="../../../assets/img/svgs/sweet.svg"
+                    alt="anchal sweet food"
+                  />
+                  <span class="ml-1 font-weight-bold text-secondary"
+                    >Sweet Items</span
+                  >
+                </div>
+              </a>
+            </ng-template>
+            <ng-template carouselSlide>
+              <!-- pre-order -->
+              <a href="#">
+                <div
+                  class="single_categories d-flex flex-column align-items-center border rounded py-1 px-3 cat_three"
+                >
+                  <img
+                    src="../../../assets/img/svgs/announce.svg"
+                    alt="anchal pre-order food"
+                  />
+                  <span class="ml-1 font-weight-bold text-secondary"
+                    >Pre-order</span
+                  >
+                </div>
+              </a>
+            </ng-template>
+            <ng-template carouselSlide>
+              <!-- hand-made -->
+              <a href="#">
+                <div
+                  class="single_categories d-flex flex-column align-items-center border rounded py-1 px-3 cat_three"
+                >
+                  <img
+                    src="../../../assets/img/svgs/announce.svg"
+                    alt="anchal pre-order food"
+                  />
+                  <span class="ml-1 font-weight-bold text-secondary"
+                    >Home-made</span
+                  >
+                </div>
+              </a>
+            </ng-template>
+            <ng-template carouselSlide>
+              <!-- e-anchal -->
+              <a href="#">
+                <div
+                  class="single_categories d-flex flex-column align-items-center border rounded py-1 px-3"
+                >
+                  <img src="../../../assets/img/svgs/tick.svg" alt="e-anchal" />
+                  <span class="ml-1 font-weight-bold text-secondary"
+                    >E-Anchal</span
+                  >
+                </div>
+              </a>
+            </ng-template>
+          </owl-carousel-o>
+        </div>
       </div>
+      <div class="clearfix"></div>
     </div>
     <div
       id="carouselExampleInterval"
@@ -376,7 +406,11 @@
           <div class="card">
             <div class="row">
               <div class="col-5 text-center">
-                <img [src]="product.image | safe: 'url'" [alt]="product.name" />
+                <img
+                  [src]="product.image | safe: 'url'"
+                  [alt]="product.name"
+                  loading="lazy"
+                />
               </div>
               <div class="col-7">
                 <div class="pre-order-info px-lg-3 pt-lg-3">

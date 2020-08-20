@@ -13,7 +13,9 @@ import { Observable, from, BehaviorSubject, throwError } from "rxjs";
 import { Products, Customize } from "../model/models";
 import { LoadingService } from "./loading.service";
 import { MessageService } from "./message.service";
-
+import { allProducts } from "src/products/allProducts";
+import { environment } from "src/environments/environment.prod";
+import * as CryptoJS from "crypto-js";
 @Injectable({
   providedIn: "root",
 })
@@ -31,6 +33,14 @@ export class ObservablesService {
   private customizeDataSubject = new BehaviorSubject<any>(null);
   public custmizeDataObservable$ = this.customizeDataSubject.asObservable();
   //==============================================================
+
+  /**
+   * product store and state
+   * return session policy
+   */
+  product: any[] = [];
+  cart: any[] = [];
+
   constructor(
     private afs: AngularFirestore,
     private loadingService: LoadingService,
@@ -81,5 +91,27 @@ export class ObservablesService {
         }
       })
     );
+  }
+
+  //======================set all product state==============
+  getEncryptedData(sessionName: string) {
+    const data = sessionStorage.getItem(sessionName);
+    var bytes = CryptoJS.AES.decrypt(data, environment.serectkey);
+    var decryptedData = JSON.parse(bytes.toString(CryptoJS.enc.Utf8));
+    let result = decryptedData;
+    return result;
+  }
+  stateAllProduct() {
+    if (sessionStorage.getItem("user") !== null) {
+      this.cart = this.getEncryptedData("user");
+    }
+    this.product = allProducts.map(
+      function (n) {
+        let index = this.cart.findIndex((m) => m.id === n.id);
+        n.state = index !== -1 ? true : false;
+        return n;
+      }.bind(this)
+    );
+    return this.product;
   }
 }
