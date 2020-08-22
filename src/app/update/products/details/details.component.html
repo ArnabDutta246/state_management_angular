@@ -1,1 +1,85 @@
-<p>details works!</p>
+<!---===========================product details button===========================-->
+<!--   data-backdrop="static" -->
+<div
+  class="modal fade"
+  id="staticBackdrop"
+  data-keyboard="false"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="staticBackdropLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content" *ngIf="productDetails != null">
+      <div class="modal-body">
+        <div class="product-details-card">
+          <button
+            type="button"
+            class="close product-details-close-button"
+            data-dismiss="modal"
+            aria-label="Close"
+            #modalCloseButton
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+
+          <div class="product-details-img text-center mb-2">
+            <img
+              [src]="productDetails.image | safe: 'url'"
+              [alt]="productDetails.name"
+              style="height: 200px;"
+            />
+          </div>
+
+          <div class="px-2 product-details-info">
+            <h5 class="product-details-title bangla-font">
+              {{ productDetails.name }}
+            </h5>
+            <p class="product-details-origin bangla-font">
+              {{ productDetails.origin }}
+            </p>
+            <small
+              ><strong>{{ productDetails.detailsTitle }}</strong>
+              {{ productDetails.details }}</small
+            >
+            <br />
+            <hr />
+            <small
+              ><strong>{{ productDetails.detailsUsesTitle }}</strong>
+              {{ productDetails.detailsUses }}</small
+            >
+            <br />
+            <h5 class="text-danger">
+              {{ productDetails.inStock === false ? "Out of Stock *" : "" }}
+            </h5>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <div class="d-flex justify-content-start align-items-center">
+          <p class="product-details-price">{{ productDetails.displayPrice }}</p>
+          <p class="product-details-quantity ml-2 mr-5">
+            ( {{ productDetails.quantity }} )
+          </p>
+        </div>
+        <button
+          class="btn btn-sm btn-warning flex-grow-12 custom-order-button"
+          *ngIf="productDetails.state === false; else viewCart"
+          (click)="addToCartOrRemove(data)"
+          [disabled]="productDetails.inStock === false"
+        >
+          Add to cart
+        </button>
+        <ng-template #viewCart>
+          <button
+            class="btn btn-sm btn-outline-success bg-white flex-grow-12 custom-order-button"
+            (click)="modalAction()"
+          >
+            View in cart &#10003;
+          </button>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</div>
+<!---===========================product details button===========================-->

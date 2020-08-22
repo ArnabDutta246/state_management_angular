@@ -1,15 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, OnChanges } from "@angular/core";
 
 @Component({
-  selector: 'app-details',
-  templateUrl: './details.component.html',
-  styleUrls: ['./details.component.scss']
+  selector: "app-details",
+  templateUrl: "./details.component.html",
+  styleUrls: ["./details.component.scss"],
 })
-export class DetailsComponent implements OnInit {
+export class DetailsComponent implements OnInit, OnChanges {
+  @Input() data: any;
+  productDetails: any = null;
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
+  ngOnInit() {}
+  ngOnChanges() {
+    this.productDetails = this.data;
   }
-
 }

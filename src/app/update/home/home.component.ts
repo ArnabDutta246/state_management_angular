@@ -14,6 +14,7 @@ export class UpdateHomeComponent implements OnInit {
   banner$: any[] = [];
   enterprenourse$: any[] = [];
   products: any = [];
+  product: any;
   constructor(
     private observables: ObservablesService,
     private loadingService: LoadingService
@@ -71,4 +72,9 @@ export class UpdateHomeComponent implements OnInit {
     },
     nav: false,
   };
+
+  //================================
+  productDetails(data) {
+    this.product = data;
+  }
 }
