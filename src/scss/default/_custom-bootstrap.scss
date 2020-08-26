@@ -75,8 +75,8 @@
 .nav-tabs .nav-link.active {
   color: #495057;
   background-color: #fff;
-  border-color: #dee2e6 #dee2e6 #fff;
-  border-top: 3px solid #62ff62;
+  border-color: transparent;
+  border-bottom: 3px solid #62ff62;
 }
 .nav-tabs .nav-link {
   font-size: 1.2rem;

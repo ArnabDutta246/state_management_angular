@@ -137,7 +137,10 @@
             class="anchal-logo"
           />
         </a>
-        <div class="alert-action flex-grow-12">
+        <div
+          class="alert-action flex-grow-12"
+          (click)="loadingService.openNav()"
+        >
           <img
             src="../../../assets/img/svgs/cart.svg"
             alt="cart"
@@ -186,7 +189,7 @@
         class="text-capitalize font-weight-bold text-secondary mx-2"
         style="font-size: 1rem;"
       >
-        All Categories
+        Shop Categories
       </span>
       <div class="categories_container">
         <div class="all_categories mb-3 mt-1">
@@ -201,9 +204,8 @@
                   <img
                     src="../../../assets/img/svgs/organic.svg"
                     alt="anchal organic food"
-                  />
-                  <span class="ml-1 font-weight-bold text-secondary"
-                    >Organic Foods</span
+                  /><span class="ml-1 font-weight-bold text-secondary"
+                    >Organic</span
                   >
                 </div>
               </a>
@@ -219,7 +221,7 @@
                     alt="anchal sweet food"
                   />
                   <span class="ml-1 font-weight-bold text-secondary"
-                    >Sweet Items</span
+                    >Sweets</span
                   >
                 </div>
               </a>
@@ -520,3 +522,8 @@
   </div>
 </div>
 <app-details [data]="product"></app-details>
+<!-- <app-cart></app-cart> -->
+<!-- <ng-template
+  *ngIf="detailLazy"
+  [ngComponentOutlet]="detailLazy | async"
+></ng-template> -->

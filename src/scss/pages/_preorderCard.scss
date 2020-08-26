@@ -1,7 +1,8 @@
 .pre-order-box {
   background: $colorLightGreen;
   padding: 1.6rem 1.2rem;
-
+  border: 1px solid #cfcfcf;
+  border-radius: 3px;
   .card {
     background: transparent;
     border: transparent;

@@ -13,71 +13,161 @@
     <div class="modal-content" *ngIf="productDetails != null">
       <div class="modal-body">
         <div class="product-details-card">
-          <button
-            type="button"
-            class="close product-details-close-button"
-            data-dismiss="modal"
-            aria-label="Close"
-            #modalCloseButton
-          >
-            <span aria-hidden="true">&times;</span>
-          </button>
-
-          <div class="product-details-img text-center mb-2">
-            <img
-              [src]="productDetails.image | safe: 'url'"
-              [alt]="productDetails.name"
-              style="height: 200px;"
-            />
-          </div>
-
           <div class="px-2 product-details-info">
-            <h5 class="product-details-title bangla-font">
-              {{ productDetails.name }}
-            </h5>
-            <p class="product-details-origin bangla-font">
-              {{ productDetails.origin }}
-            </p>
-            <small
-              ><strong>{{ productDetails.detailsTitle }}</strong>
-              {{ productDetails.details }}</small
-            >
+            <div class="cards">
+              <div
+                class="product-details-img d-flex flex-column justify-content-center align-items-center mb-2"
+                style="width: 100%;"
+              >
+                <img
+                  [src]="productDetails.image | safe: 'url'"
+                  [alt]="productDetails.name"
+                  style="width: 200px;"
+                  class="card-img-top"
+                />
+              </div>
+              <div class="cards-body">
+                <div class="product-info-box">
+                  <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <a
+                        href=""
+                        class="nav-link active"
+                        id="product-tab"
+                        data-toggle="tab"
+                        href="#product"
+                        aria-controls="product"
+                        aria-selected="true"
+                        >পণ্য বিবরণ</a
+                      >
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <a
+                        href=""
+                        class="nav-link"
+                        id="details-tab"
+                        data-toggle="tab"
+                        href="#details"
+                        aria-controls="details"
+                        aria-selected="false"
+                        >{{ productDetails.detailsTitle }}</a
+                      >
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <a
+                        href=""
+                        class="nav-link"
+                        id="reserve-tab"
+                        data-toggle="tab"
+                        href="#reserve"
+                        aria-controls="reserve"
+                        aria-selected="false"
+                        >{{ productDetails.detailsUsesTitle }}</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="tab-content" id="myTabContent p-2">
+                  <div
+                    class="tab-pane fade show active"
+                    id="product"
+                    role="tabpanel"
+                    aria-labelledby="product-tab"
+                  >
+                    <div
+                      class="d-flex justify-content-between align-items-start"
+                    >
+                      <div>
+                        <h5 class="product-details-title">
+                          {{ productDetails.name }}
+                        </h5>
+                        <span class="product-details-origin">
+                          {{ productDetails.origin }}
+                        </span>
+                        <p
+                          class="font-weight-bold"
+                          [ngClass]="
+                            productDetails.inStock === false
+                              ? 'text-danger'
+                              : 'text-success'
+                          "
+                        >
+                          {{
+                            productDetails.inStock === false
+                              ? "Out of Stock **"
+                              : productDetails.preOrderable
+                              ? "Pre-orderable **"
+                              : "In stock **"
+                          }}
+                        </p>
+                      </div>
+                      <div
+                        class="d-flex flex-column justify-content-end align-items-end border-left p-2"
+                      >
+                        <span class="product-details-price">
+                          {{ productDetails.displayPrice }}
+                        </span>
+                        <span class="product-details-quantity ml-2">
+                          ( {{ productDetails.quantity }} )
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="details"
+                    role="tabpanel"
+                    aria-labelledby="details-tab"
+                  >
+                    <small> {{ productDetails.details }}</small>
+                    <br />
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="reserve"
+                    role="tabpanel"
+                    aria-labelledby="reserve-tab"
+                  >
+                    <small> {{ productDetails.detailsUses }}</small>
+                    <br />
+                  </div>
+                </div>
+              </div>
+            </div>
             <br />
-            <hr />
-            <small
-              ><strong>{{ productDetails.detailsUsesTitle }}</strong>
-              {{ productDetails.detailsUses }}</small
-            >
-            <br />
-            <h5 class="text-danger">
-              {{ productDetails.inStock === false ? "Out of Stock *" : "" }}
-            </h5>
           </div>
         </div>
       </div>
       <div class="modal-footer">
-        <div class="d-flex justify-content-start align-items-center">
-          <p class="product-details-price">{{ productDetails.displayPrice }}</p>
-          <p class="product-details-quantity ml-2 mr-5">
-            ( {{ productDetails.quantity }} )
-          </p>
+        <div class="row" style="width: 100%;">
+          <div class="col-6">
+            <button
+              type="button"
+              class="btn btn-outline-danger btn-block custom-order-button"
+              data-dismiss="modal"
+            >
+              Back to shopping
+            </button>
+          </div>
+          <div class="col-6">
+            <button
+              class="btn btn-block btn-warning flex-grow-12 custom-order-button"
+              *ngIf="productDetails.state === false; else viewCart"
+              (click)="addToCartOrRemove(data)"
+              [disabled]="productDetails.inStock === false"
+            >
+              Add to cart
+            </button>
+            <ng-template #viewCart>
+              <button
+                class="btn btn-block btn-outline-success bg-white flex-grow-12 custom-order-button"
+                (click)="modalAction()"
+              >
+                View in cart &#10003;
+              </button>
+            </ng-template>
+          </div>
         </div>
-        <button
-          class="btn btn-sm btn-warning flex-grow-12 custom-order-button"
-          *ngIf="productDetails.state === false; else viewCart"
-          (click)="addToCartOrRemove(data)"
-          [disabled]="productDetails.inStock === false"
-        >
-          Add to cart
-        </button>
-        <ng-template #viewCart>
-          <button
-            class="btn btn-sm btn-outline-success bg-white flex-grow-12 custom-order-button"
-            (click)="modalAction()"
-          >
-            View in cart &#10003;
-          </button>
-        </ng-template>
       </div>
     </div>
   </div>

@@ -14,7 +14,7 @@
       display: block;
       box-shadow: 1px 1px 1px #cccbcb;
       font-size: 1.2rem;
-      background-color: #f6f6f6e6 !important;
+      background-color: #ffffffe6 !important;
       .anchal-logo {
         height: 36px;
         margin: 1px 13px;
@@ -212,34 +212,34 @@
       .single_categories {
         margin: 0.3rem 0.3rem;
         img {
-          height: 25px;
+          height: 18px;
         }
+
         span {
-          font-size: 0.7rem;
+          font-size: 0.67rem;
           text-transform: capitalize;
         }
       }
+      // .blur-box {
+      //   padding: 18px 8px;
+      //   background: #ffffff;
+      //   position: absolute;
+      //   z-index: 9;
+      //   top: -1%;
+      //   right: 0;
+      //   border: 1px solid #d0d0d0;
+      // }
     }
-    // .blur-box {
-    //   padding: 18px 8px;
-    //   background: #ffffff;
-    //   position: absolute;
-    //   z-index: 9;
-    //   top: -1%;
-    //   right: 0;
-    //   border: 1px solid #d0d0d0;
-    // }
   }
 }
-
 .cat_one {
-  background: honeydew;
+  background: $catColorLightGreen;
 }
 .cat_two {
-  background: #feeded;
+  background: $catColorLightBrown;
 }
 .cat_three {
-  background: #fef9f1;
+  background: $catColorLightYellow;
   img {
     transform: rotate(-20deg);
   }

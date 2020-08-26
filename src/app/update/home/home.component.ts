@@ -1,10 +1,17 @@
-import { Component, OnInit } from "@angular/core";
+import {
+  Component,
+  OnInit,
+  ViewContainerRef,
+  ComponentFactoryResolver,
+  Type,
+} from "@angular/core";
 import { ObservablesService } from "src/app/services/observables.service";
 import { LoadingService } from "src/app/services/loading.service";
 import { Observable } from "rxjs";
 import { map, filter } from "rxjs/operators";
 import { Banner, Entrep } from "src/app/model/models";
 import { OwlOptions } from "ngx-owl-carousel-o";
+import { DetailsComponent } from "../products/details/details.component";
 @Component({
   selector: "app-home",
   templateUrl: "./home.component.html",
@@ -15,9 +22,13 @@ export class UpdateHomeComponent implements OnInit {
   enterprenourse$: any[] = [];
   products: any = [];
   product: any;
+
+  detailLazy: Promise<Type<DetailsComponent>>;
   constructor(
     private observables: ObservablesService,
-    private loadingService: LoadingService
+    public loadingService: LoadingService,
+    private viewContainerRef: ViewContainerRef,
+    private cfr: ComponentFactoryResolver
   ) {
     //=============load products data=====
     this.products = this.observables.stateAllProduct();
@@ -64,10 +75,10 @@ export class UpdateHomeComponent implements OnInit {
         items: 4,
       },
       740: {
-        items: 4,
+        items: 5,
       },
       940: {
-        items: 4,
+        items: 5,
       },
     },
     nav: false,
@@ -77,4 +88,37 @@ export class UpdateHomeComponent implements OnInit {
   productDetails(data) {
     this.product = data;
   }
+
+  //===============================
+  // side bar open close
+  //===============================
+  openNav() {
+    let sideDrawer = document.getElementById("side-drawer");
+    sideDrawer.classList.contains("open")
+      ? this.openClose(sideDrawer, "close", "open")
+      : this.openClose(sideDrawer, "open", "close");
+    //if (!this.cartState) this.goToOrderF(2);
+  }
+  openClose = (sideDrawer, add, remove) => {
+    sideDrawer.classList.remove(remove);
+    sideDrawer.classList.add(add);
+  };
+
+  //==============lazy loading ==============
+  // async load(data) {
+  //   this.loadingService.prodDetails = data;
+  //   // this.viewContainerRef.clear();
+  //   // const { DetailsComponent } = await import(
+  //   //   "../products/details/details.component"
+  //   // );
+  //   // this.viewContainerRef.createComponent(
+  //   //   this.cfr.resolveComponentFactory(DetailsComponent)
+  //   // );
+
+  //   if (!this.detailLazy) {
+  //     this.detailLazy = import("../products/details/details.component").then(
+  //       ({ DetailsComponent }) => DetailsComponent
+  //     );
+  //   }
+  // }
 }

@@ -22,7 +22,8 @@ import { UpdateHomeComponent } from "./update/home/home.component";
 import { LoadingComponent } from "./update/loading/loading.component";
 import { LoadingService } from "./services/loading.service";
 import { MessageService } from "./services/message.service";
-import { DetailsComponent } from './update/products/details/details.component';
+import { CartComponent } from "./update/products/cart/cart.component";
+import { DetailsComponent } from "./update/products/details/details.component";
 //import { environment } from '../environments/environment';
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { DetailsComponent } from './update/products/details/details.component';
     UpdateHomeComponent,
     LoadingComponent,
     DetailsComponent,
+    CartComponent,
   ],
   imports: [
     BrowserAnimationsModule,
@@ -59,5 +61,6 @@ import { DetailsComponent } from './update/products/details/details.component';
   ],
   providers: [LoadingService, MessageService],
   bootstrap: [AppComponent],
+  entryComponents: [],
 })
 export class AppModule {}
